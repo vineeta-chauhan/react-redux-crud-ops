@@ -1,0 +1,34 @@
+.mainContainer{
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.subContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.createBtn{
+  margin-bottom: 1rem;
+}
+.tableContainer{
+ box-shadow: 0 5px 8px -5px ;
+ background-color: white;
+}
+.tableCellCenter{
+  text-align: center;
+}
+.tableHeaderCenter{
+  padding: 0.7rem!important;
+  font-weight: 600;
+}
+.btnContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  margin: 2px;
+  width: 4vw;
+  height: 4vh;
+}

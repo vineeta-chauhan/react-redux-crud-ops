@@ -1,0 +1,70 @@
+.formContainer{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  height: 70vh;
+  width: 70vw;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-left: 2rem;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-top: 1vh;
+}
+.userContainer{
+  margin: 2px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.subContainer{
+  width: 70vw;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.label{
+  color: grey;
+  font-size: larger;
+  width: 10vw;
+  text-align: start;
+}
+
+.inputContainer{
+  width: 30vw;
+  height: 4vh;
+  min-height: 40px;
+  background: #8080804d;
+  border: none;
+  border-radius: 5px;
+}
+.label1{
+  margin-right: 10px;
+  color: grey;
+}
+.btnContainer{
+  flex-direction: column;
+  margin-top: 27px;
+  display: flex;
+  border-radius: 5px;
+}
+.button{
+  width: 20rem;
+  height: 4vh;
+  min-height: 40px;
+  background: #00b8ff87;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5rem;
+  color: white;
+  font-size: larger;
+  border: none;
+}
