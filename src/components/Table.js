@@ -4,7 +4,7 @@ import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 
 
-const Table = ({ pageSize = 20, columns, data, ...rest }) => {
+const Table = ({ pageSize = 15, columns, data, ...rest }) => {
   const [pageSizeState, setPageSizeState] = useState(pageSize); 
   return (
     <ReactTable
