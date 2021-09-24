@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
 
-import Table from './Table';
+import Table from './Table/index';
 
 import {
   deleteUser as deleteUserAction
@@ -11,11 +11,10 @@ import styles from './userList.module.css';
 
 
 const UserList = (props) => {
-
   const { allUser, deleteUser, history } = props;
   const users = Object.values(allUser);
 
-  const DeleteButton = ({ original: { email } }) => {
+  const DeleteButton = ({ email }) => {
     return (
       <button
         className={styles.button}
@@ -26,7 +25,7 @@ const UserList = (props) => {
     );
   }
 
-  const EditButton = ({ original: { email, phone, name } }) => {
+  const EditButton = ({ email, phone, name }) => {
     return (
       <button
         className={styles.button}
@@ -44,19 +43,19 @@ const UserList = (props) => {
   const columns = [
     {
       Header: 'Name',
-      accessor: 'name',
+      accessor: data => data.name,
       className: styles.tableCellCenter,
       headerClassName: styles.tableHeaderCenter,
     },
     {
       Header: 'Email',
-      accessor: 'email',
+      accessor: data => data.email,
       className: styles.tableCellCenter,
       headerClassName: styles.tableHeaderCenter,
     },
     {
       Header: 'Phone',
-      accessor: 'phone',
+      accessor: data => data.phone,
       className: styles.tableCellCenter,
       headerClassName: styles.tableHeaderCenter,
     },
@@ -76,7 +75,46 @@ const UserList = (props) => {
       headerClassName: styles.tableHeaderCenter,
       width: 120,
     }
-  ]
+  ];
+
+  const data = [
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+      address: "jhagdjhfa"
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "sandeep",
+      email: "sandeep@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    }
+  ];
 
   return (
     <div className={styles.mainContainer}>
@@ -88,7 +126,7 @@ const UserList = (props) => {
       </div>
       <div>
         <div className={styles.tableContainer}>
-          <Table columns={columns} data={users} />
+          <Table data={users} columns={columns} />
         </div>
       </div>
     </div>

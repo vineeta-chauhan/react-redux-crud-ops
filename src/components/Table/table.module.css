@@ -1,0 +1,11 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.tableContainer{
+  flex: 1
+}
+.paginationContainer{
+  height: 2.5rem
+}
