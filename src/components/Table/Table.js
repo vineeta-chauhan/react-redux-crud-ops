@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Pagination from './Pagination';
 
@@ -17,7 +17,7 @@ const Table = (props) => {
     setPaginatedData((
       data.slice((currentPage - 1) * pageSizeState, currentPage * pageSizeState)
     ))
-  }, [currentPage, pageSizeState, data])
+  }, [currentPage, pageSizeState, data,])
 
   return (
     <div className={styles.mainContainer}>
@@ -51,10 +51,12 @@ const Table = (props) => {
       <Pagination
         currentPage={currentPage}
         totalCount={data.length}
-        pageSize={pageSize}
+        pageSize={pageSizeState}
+        setPageSize={setPageSizeState}
         onPageChange={setCurrentPage}
         className={styles.paginationContainer}
       />
+
     </div>
   )
 };

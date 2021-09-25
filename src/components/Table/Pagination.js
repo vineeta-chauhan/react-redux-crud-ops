@@ -1,4 +1,6 @@
 import React from 'react'
+import Select from '../Select/Select'
+
 import styles from './pagination.module.css';
 
 
@@ -7,6 +9,7 @@ const Pagination = (props) => {
     currentPage,
     totalCount,
     pageSize,
+    setPageSize,
     onPageChange,
     className
   } = props;
@@ -23,12 +26,15 @@ const Pagination = (props) => {
   }
 
   const setNextPage = () => {
-    const prevPage = currentPage + 1 < value ? currentPage + 1 : currentPage;
+    const prevPage = currentPage + 1 <= value ? currentPage + 1 : currentPage;
     onPageChange(prevPage);
   }
 
+  const options = [5, 10, 20, 50, 100];
+
   return (
     <div className={`${styles.pagination} ${className}`} >
+      <Select onChange={e => setPageSize(e.target.value)} options={options} />
       <button onClick={setPreviousPage}>&laquo;</button>
       {
         pageNumbers.map((number, i) => {

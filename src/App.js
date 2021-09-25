@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import CreateAndEditUser from './components/CreateAndEditUser/CreateAndEditUser';
-import UserList from './components/UserList';
+import UserList from './components/UserList/UserList';
 
 import 'antd/dist/antd.css'
 

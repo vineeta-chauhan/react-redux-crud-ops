@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
 
-import Table from './Table/index';
+import Table from '../Table/index';
 
 import {
   deleteUser as deleteUserAction
-} from '../redux/actions';
+} from '../../redux/actions';
 
 import styles from './userList.module.css';
 
@@ -113,6 +113,26 @@ const UserList = (props) => {
       name: "vineeta",
       email: "vineeta@gmail.com",
       phone: 1234567890,
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "vineeta",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
+    },
+    {
+      name: "xyz",
+      email: "vineeta@gmail.com",
+      phone: 1234567890,
     }
   ];
 
@@ -126,7 +146,7 @@ const UserList = (props) => {
       </div>
       <div>
         <div className={styles.tableContainer}>
-          <Table data={users} columns={columns} />
+          <Table data={data} columns={columns} />
         </div>
       </div>
     </div>
